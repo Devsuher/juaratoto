@@ -1,0 +1,521 @@
+
+
+<!DOCTYPE html>
+<html amp lang="id-ID">
+  <head>
+  <meta charset="utf-8">
+  <title>JuaraToto : Mengamati Pergerakan Lawan dan Memahami Ritme</title>
+  <meta name="description" content="JuaraToto membantu membaca setiap langkah kompetitor dan menguasai alur permainan dengan strategi paling efektif untuk mendapatkan keuntungan">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <link rel="canonical" href="https://juaratotox.org">
+  <meta name="robots" content="index, follow, nosnippet">
+  <meta name="author" content="JUARATOTO">
+  <link rel="icon" href="https://juaratotox.org/wp-content/uploads/2026/07/icon_h88.webp" type="image/png">
+  <script async custom-element="amp-audio" src="https://cdn.ampproject.org/v0/amp-audio-0.1.js"></script>
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  
+  <style amp-boilerplate>
+    body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+  </style>
+
+  <noscript>
+    <style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
+  </noscript>
+
+  <style amp-custom>
+    :root {
+      --bg-base: #060913;
+      --bg-wrapper: #0b111e;
+      --bg-card: #121b2d;
+      --bg-surface: #1a263f;
+      --primary: #f7022b;
+      --primary-glow: rgba(0, 112, 243, 0.4);
+      --accent: #f7022b;
+      --accent-gradient: linear-gradient(135deg, #f7022b, #00df89);
+      --btn-register: linear-gradient(135deg, #f7022b, #f7022b);
+      --text-main: #ffffff;
+      --text-muted: #8fa0c2;
+      --border: rgba(255, 255, 255, 0.07);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg-base);
+      color: var(--text-main);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .wrap {
+      max-width: 480px;
+      margin: 0 auto;
+      min-height: 100vh;
+      background: var(--bg-wrapper);
+      border-left: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+      padding-bottom: 90px;
+      box-shadow: 0 0 40px rgba(0,0,0,0.6);
+    }
+
+    .topbar {
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(11, 17, 30, 0.85);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .topbar strong {
+      font-size: 18px;
+      letter-spacing: 1.5px;
+      font-weight: 800;
+      background: linear-gradient(135deg, #fff, var(--text-muted));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .top-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .profile {
+      padding: 28px 20px 20px;
+      text-align: center;
+    }
+
+    .avatar {
+      width: 108px;
+      height: 108px;
+      margin: 0 auto 16px;
+      border-radius: 50%;
+      padding: 3px;
+      background: var(--accent-gradient);
+      box-shadow: 0 0 20px rgba(0, 82, 255, 0.3);
+    }
+
+    .avatar-inner {
+      width: 102px;
+      height: 102px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: var(--bg-wrapper);
+      border: 2px solid var(--bg-wrapper);
+    }
+
+    .username {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin: 6px 0 2px;
+    }
+
+    .handle {
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-bottom: 18px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 18px 0 22px;
+      background: var(--bg-card);
+      padding: 12px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+    }
+
+    .stat b {
+      display: block;
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--text-main);
+    }
+
+    .stat span {
+      display: block;
+      color: var(--text-muted);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 2px;
+    }
+
+    .bio {
+      max-width: 380px;
+      margin: 0 auto 18px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--text-muted);
+    }
+
+    .bio strong {
+      color: var(--text-main);
+      font-size: 15px;
+    }
+
+    .link-text {
+      display: inline-block;
+      font-size: 13px;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 22px;
+      border-bottom: 1px dashed var(--accent);
+      padding-bottom: 2px;
+    }
+
+    .action-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 48px;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .btn {
+      height: 46px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+      box-shadow: 0 4px 16px var(--primary-glow);
+    }
+
+    .btn-dark {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      color: var(--text-main);
+    }
+
+    .btn-small {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      font-size: 16px;
+      color: var(--text-muted);
+    }
+
+    .tabs {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      margin-top: 12px;
+      background: rgba(255,255,255,0.01);
+    }
+
+    .tab {
+      text-align: center;
+      padding: 14px 0;
+      font-size: 18px;
+      color: var(--text-muted);
+      position: relative;
+      cursor: pointer;
+    }
+
+    .tab.active {
+      color: var(--accent);
+    }
+
+    .tab.active:after {
+      content: "";
+      position: absolute;
+      left: 30%;
+      right: 30%;
+      bottom: 0;
+      height: 3px;
+      background: var(--accent);
+      border-radius: 99px;
+      box-shadow: 0 -2px 10px var(--accent);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4px;
+      padding: 4px;
+      background: var(--bg-base);
+    }
+
+    .post {
+      position: relative;
+      min-height: 180px;
+      background: var(--bg-card);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .post amp-img {
+      filter: brightness(.88);
+      transition: transform 0.3s ease;
+    }
+
+    .post:after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(6, 9, 19, 0.85));
+      z-index: 1;
+    }
+
+    .views {
+      position: absolute;
+      left: 10px;
+      bottom: 10px;
+      z-index: 2;
+      font-size: 11px;
+      font-weight: 700;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+    }
+
+    .pin {
+      position: absolute;
+      right: 8px;
+      top: 8px;
+      z-index: 2;
+      font-size: 9px;
+      background: #ff0055;
+      color: #fff;
+      padding: 3px 6px;
+      border-radius: 6px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 6px rgba(255,0,85,0.4);
+    }
+    
+    .pin.hot {
+      background: #ff9900;
+      box-shadow: 0 2px 6px rgba(255,153,0,0.4);
+    }
+
+    .section {
+      padding: 24px 20px;
+      border-top: 1px solid var(--border);
+    }
+
+    .section h2 {
+      margin: 0 0 16px;
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 0.3px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section h2::before {
+      content: "";
+      display: inline-block;
+      width: 4px;
+      height: 16px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+
+    .review, .faq {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px;
+      margin-bottom: 12px;
+    }
+
+    .review strong, .faq strong {
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 6px;
+    }
+
+    .review span, .faq span {
+      display: block;
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    .bottom-nav {
+      position: fixed;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 480px;
+      z-index: 20;
+      background: rgba(11, 17, 30, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-top: 1px solid var(--border);
+      padding: 12px 16px 16px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .bottom-nav a {
+      text-align: center;
+      padding: 14px 10px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .login {
+      background: var(--bg-surface);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: var(--text-main);
+    }
+
+    .daftar {
+      background: var(--btn-register);
+      color: #fff;
+      box-shadow: 0 4px 20px rgba(0, 82, 255, 0.35);
+    }
+
+    @media(max-width:390px){
+      .post { min-height: 150px; }
+      .username { font-size: 19px; }
+      .bio { font-size: 13px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <header class="topbar">
+      <div class="top-icon">⚡</div>
+      <strong>JUARATOTO</strong>
+      <div class="top-icon">☰</div>
+    </header>
+
+    <section class="profile">
+      <div class="avatar">
+        <div class="avatar-inner">
+          <amp-img 
+            src="https://juaratotox.org/wp-content/uploads/2026/07/icon_h88.webp" 
+            width="100" 
+            height="98" 
+            layout="fixed" 
+            alt="Logo JUARATOTO">
+          </amp-img>
+        </div>
+      </div>
+
+      <div class="username">JUARATOTO OFFICIAL</div>
+      <div class="handle">@Anak Manja</div>
+
+      <div class="stats">
+        <div class="stat">
+          <b>68</b>
+          <span>Following</span>
+        </div>
+        <div class="stat">
+          <b>201.K</b>
+          <span>Followers</span>
+        </div>
+        <div class="stat">
+          <b>2.7M</b>
+          <span>Likes</span>
+        </div>
+      </div>
+
+      <p class="bio">
+        <strong>JUARATOTO</strong><br>
+        #spinmanja #automaxwin #gamehangat
+      </p>
+      <div class="action-row">
+        <a class="btn btn-primary" href="https://hrkopie.pages.dev/">Daftar</a>
+        <a class="btn btn-dark" href="https://hrkopie.pages.dev/">Login</a>
+        <a class="btn btn-small" href="https://juaratotox.org">▾</a>
+      </div>
+    </section>
+
+    <nav class="tabs">
+      <div class="tab active">▦</div>
+      <div class="tab">♡</div>
+      <div class="tab">🔒</div>
+    </nav>
+
+    <section class="grid">
+      <a class="post" href="https://hrkopie.pages.dev/">
+        <amp-img src="https://servicefirstdhlhk.com/img/hot-girl-1.webp" width="130" height="220" layout="responsive" alt="Trand Post 1"></amp-img>
+        <div class="pin">PIN</div>
+        <div class="views">▶ 288.1K</div>
+      </a>
+
+      <a class="post" href="https://hrkopie.pages.dev/">
+        <amp-img src="https://servicefirstdhlhk.com/img/hot-girl-2.webp" width="130" height="220" layout="responsive" alt="Trand Post 2"></amp-img>
+        <div class="pin hot">HOT</div>
+        <div class="views">▶ 300.5K</div>
+      </a>
+
+      <a class="post" href="https://hrkopie.pages.dev/">
+        <amp-img src="https://servicefirstdhlhk.com/img/hot-girl-3.jpg" width="130" height="220" layout="responsive" alt="Trand Post 3"></amp-img>
+        <div class="views">▶ 78.2K</div>
+      </a>
+
+      <a class="post" href="https://hrkopie.pages.dev/">
+        <amp-img src="https://servicefirstdhlhk.com/img/hot-girl-4.webp" width="130" height="220" layout="responsive" alt="Trand Post 4"></amp-img>
+        <div class="views">▶ 100.9K</div>
+      </a>
+
+      <a class="post" href="https://hrkopie.pages.dev/">
+        <amp-img src="https://servicefirstdhlhk.com/img/hot-girl-5.webp" width="130" height="220" layout="responsive" alt="Trand Post 5"></amp-img>
+        <div class="views">▶ 200.7K</div>
+      </a>
+
+      <a class="post" href="https://hrkopie.pages.dev/">
+        <amp-img src="https://servicefirstdhlhk.com/img/hot-girl-6.webp" width="130" height="220" layout="responsive" alt="Trand Post 6"></amp-img>
+        <div class="views">▶ 65.4K</div>
+      </a>
+    </section>
+    <nav class="bottom-nav">
+      <a class="login" href="https://hrkopie.pages.dev/">LOGIN</a>
+      <a class="daftar" href="https://hrkopie.pages.dev/">DAFTAR</a>
+    </nav>
+
+  </div>
+</body>
+</html>
